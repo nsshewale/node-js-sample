@@ -20,5 +20,6 @@ artifacts:
     - node_modules/**/*
     - package.json
     - Procfile
+    - appspec.yml
 
      
