@@ -11,6 +11,9 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - printenv > .env
+      - cat .env
+      - touch .env.example
 # Include only the files required for your application to run.
 artifacts:
   files:
