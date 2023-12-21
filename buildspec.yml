@@ -19,5 +19,6 @@ artifacts:
     - app.json
     - node_modules/**/*
     - package.json
+    - Procfile
 
      
