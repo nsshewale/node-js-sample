@@ -1,4 +1,8 @@
 version: 0.2
+env:
+  parameter-store:
+    PASSWORD: Solutions
+
 phases:
   pre_build:
     commands:
@@ -8,6 +12,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the dist folder
+      - echo $PASSWORD
   post_build:
     commands:
       - echo Build completed on `date`
