@@ -1,6 +1,6 @@
 #!/bin/bash
 set -x
-echo "** (directory name)-api-prod process status **" >> /tmp/(directory name)-api-prod_deploy_logs
+echo "** (directory name)-api-prod process status **" >> "/tmp/(directory name)-api-prod_deploy_logs"
 runuser -l ubuntu -c 'sudo pm2 status' | grep -wo (pm2 process name)
 if [  $? -ne 0 ];
 then
