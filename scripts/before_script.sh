@@ -1,6 +1,6 @@
 #!/bin/bash
 set -x
-echo "** (directory name)-api-prod process status **" >> "/tmp/(directory name)-api-prod_deploy_logs"
+echo "** nitesh-api-prod process status **" >> "/tmp/nitesh-api-prod_deploy_logs"
 runuser -l ubuntu -c 'sudo pm2 status' | grep -wo (pm2 process name)
 if [  $? -ne 0 ];
 then
@@ -10,8 +10,8 @@ else
     runuser -l ubuntu -c 'sudo pm2 delete (pm2 process name)'
 fi
 
-rm -rf /home/ubuntu/(directory name)
+rm -rf /home/ubuntu/nitesh
 
-if [ ! -d /home/ubuntu/(directory name) ]; then
-runuser -l ubuntu -c 'mkdir -p /home/ubuntu/(directory name)' >> /tmp/(directory name)-prod_deploy_logs
+if [ ! -d /home/ubuntu/nitesh ]; then
+runuser -l ubuntu -c 'mkdir -p /home/ubuntu/nitesh' >> /tmp/nitesh-prod_deploy_logs
 fi
