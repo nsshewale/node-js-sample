@@ -1,13 +1,13 @@
 #!/bin/bash
 set -x
 echo "** nitesh-api-prod process status **" >> "/tmp/nitesh-api-prod_deploy_logs"
-runuser -l ubuntu -c 'sudo pm2 status' | grep -wo (pm2 process name)
+runuser -l ubuntu -c 'sudo pm2 status' | grep -wo sample
 if [  $? -ne 0 ];
 then
    echo "############################## pm2 not running #################################" >> /tmp/(directory name)-api-prod_deploy_logs
 else
    echo "############################## pm2 already running Deleting ####################" >> /tmp/(directory name)-api-prod_deploy_logs
-    runuser -l ubuntu -c 'sudo pm2 delete (pm2 process name)'
+    runuser -l ubuntu -c 'sudo pm2 delete sample'
 fi
 
 rm -rf /home/ubuntu/nitesh
