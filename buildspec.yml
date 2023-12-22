@@ -20,6 +20,9 @@ phases:
       - printenv > .env
       - cat .env
       - touch .env.example
+     # - zip -r archive.zip  
+      - ls -lha
+
 # Include only the files required for your application to run.
 artifacts:
   files:
