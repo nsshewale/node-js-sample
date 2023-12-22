@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 echo "** nitesh-api-prod process status **" >> "/tmp/nitesh-api-prod_deploy_logs"
-runuser -l ubuntu -c 'sudo pm2 status' | grep -wo sample
+runuser -l root -c 'sudo pm2 status' | grep -wo sample
 if [  $? -ne 0 ];
 then
    echo "############################## pm2 not running #################################" >> /tmp/(directory name)-api-prod_deploy_logs
